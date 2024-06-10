@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto2.Paginas.Login"
+             Title="Login"
+             BackgroundColor="#e2e2e2">
+    <Grid RowDefinitions=".3*,.7*">
+        <Image Aspect="AspectFill" Source="fondo.png"/>
+        <Grid BackgroundColor="#76777c" Opacity=".9"/>
+        <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5,-30,-5,-2"
+                            CornerRadius="30,30,0,0"
+                            Fill="White"/>
+            <VerticalStackLayout Margin="30,0,30,0">
+                <Label FontAttributes="Bold"
+                       FontSize="Medium"
+                       Text="Bienbenido"
+                       TextColor="#2D2D2D"/>
+                <Label Text="Inicie sesion para Continuar"
+                       TextColor="#a3a3a4"/>
+                <Grid Margin="0,30,0,0" ColumnDefinitions=".2*,.8*">
+                    <RoundRectangle Background="#edebf6"
+                                    CornerRadius="10"
+                                    HeightRequest="60"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    WidthRequest="60"/>
+                    <Image HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource FontFamily="AwesomeSolid"
+                                             Glyph="&#xf0e0;"
+                                             Size="22"
+                                             Color="#76777c"/>
+                        </Image.Source>
+                    </Image>
+                    <Entry Grid.Column="1"
+                           Placeholder="EMAIL"
+                           Text="usuario@ejemplo.com"
+                           VerticalOptions="Center"
+                           x:Name="inputEmai"/>
+                </Grid>
+                <Grid Margin="0,30,0,0" ColumnDefinitions=".2*,.8*">
+                    <RoundRectangle Background="#edebf6"
+                                    CornerRadius="10"
+                                    HeightRequest="60"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    WidthRequest="60"/>
+                    <Image HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource FontFamily="AwesomeSolid"
+                                             Glyph="&#xf084;"
+                                             Size="22"
+                                             Color="#76777c"/>
+                        </Image.Source>
+                    </Image>
+                    <Entry Grid.Column="1"
+                           Placeholder="PASSWORD"
+                           IsPassword="True"
+                           VerticalOptions="Center"
+                           x:Name="inputPsw"/>
+                </Grid>
+                <Button Margin="0,20,0,0"
+                        BackgroundColor="#0f1b36"
+                        HeightRequest="60"
+                        Text="Iniciar Seseion"
+                        TextColor="#FBF6FD"
+                        x:Name="loginButton"
+                        Clicked="OnLoginButtonClicked" />
+
+
+                <Label Margin="0,20,0,-10"
+                       HorizontalOptions="Center"
+                       Text="Olvido su Contraseña?"
+                       TextColor="Blue"
+                       TextDecorations="Underline"/>
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

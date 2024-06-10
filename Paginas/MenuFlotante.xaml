@@ -1,0 +1,60 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto2.Paginas.MenuFlotante"
+             xmlns:models="clr-namespace:Proyecto2.Modelos"
+             xmlns:pages="clr-namespace:Proyecto2.Paginas"
+             Title="MenuFlotante"
+             Padding="0,40,0,0"
+             IconImageSource="icon_menu_flyout.png">
+    <StackLayout>
+        <CollectionView x:Name="collectionView"
+                        x:FieldModifier="public"
+                        SelectionMode="Single">
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type models:MenuflotanteItems}" >
+                    <!--item 1 -->
+                    <models:MenuflotanteItems Title="Tareas Diarias"
+                                              IconSource="Tdiarias.png"
+                                              TargertType="{x:Type pages:Tareas_Diarias}">
+                    </models:MenuflotanteItems>
+                    <!--item 2 -->
+                    <models:MenuflotanteItems Title="Lista de tareas"
+                                              IconSource="telefono.png"
+                                              TargertType="{x:Type pages:Terminar_sesion}">
+                    </models:MenuflotanteItems>
+                    <!--item 3 -->
+                    <models:MenuflotanteItems Title="Lista de tareas"
+                                              IconSource="telefono.png"
+                                              TargertType="{x:Type pages:Terminar_sesion}">
+                    </models:MenuflotanteItems>
+                </x:Array>
+            </CollectionView.ItemsSource>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="5,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="{Binding IconSource}"/>
+                        <Label Grid.Column="1"
+                               Margin="20,0"
+                               Text="{Binding Title}"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Botón adicional -->
+        <StackLayout VerticalOptions="EndAndExpand">
+            <Button Text="Terminar Sesión"
+                    Clicked="OnButtonClicked"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
+

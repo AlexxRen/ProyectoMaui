@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Proyecto2.Paginas.PaginaMain"
+            xmlns:local="clr-namespace:Proyecto2.Paginas"
+            Title="PaginaMain">
+    <FlyoutPage.Flyout>
+        <local:MenuFlotante x:Name="menuVL"/>
+    </FlyoutPage.Flyout>
+    <FlyoutPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <local:Tablero_Trabajo/>
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+    <FlyoutPage.ToolbarItems>
+        <ToolbarItem IconImageSource="menufly.png"
+                     Command="{Binding ShowMenuCommand}"
+                     Priority="0"
+                     Order="Primary" />
+    </FlyoutPage.ToolbarItems>
+</FlyoutPage>
