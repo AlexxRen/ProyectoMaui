@@ -62,7 +62,7 @@
 	  <None Remove="Resources\Images\key.png" />
 	  <None Remove="Resources\Images\logout.png" />
 	  <None Remove="Resources\Images\menufly.png" />
-	  <None Remove="Resources\Images\Tdiarias.png" />
+	  <None Remove="Resources\Images\Tdarias.png" />
 	  <None Remove="Resources\Images\telefono.png" />
 	</ItemGroup>
 

@@ -14,16 +14,11 @@
                 <x:Array Type="{x:Type models:MenuflotanteItems}" >
                     <!--item 1 -->
                     <models:MenuflotanteItems Title="Tareas Diarias"
-                                              IconSource="Tdiarias.png"
+                                              IconSource="tdarias.png"
                                               TargertType="{x:Type pages:Tareas_Diarias}">
                     </models:MenuflotanteItems>
                     <!--item 2 -->
-                    <models:MenuflotanteItems Title="Lista de tareas"
-                                              IconSource="telefono.png"
-                                              TargertType="{x:Type pages:Terminar_sesion}">
-                    </models:MenuflotanteItems>
-                    <!--item 3 -->
-                    <models:MenuflotanteItems Title="Lista de tareas"
+                    <models:MenuflotanteItems Title="Contacto Rapido"
                                               IconSource="telefono.png"
                                               TargertType="{x:Type pages:Terminar_sesion}">
                     </models:MenuflotanteItems>
